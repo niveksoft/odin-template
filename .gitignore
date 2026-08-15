@@ -1,0 +1,27 @@
+# Build output
+/bin/
+/out/
+/build/
+*.exe
+*.bin
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Debug / linker artifacts
+*.pdb
+*.ilk
+*.exp
+*.dSYM/
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

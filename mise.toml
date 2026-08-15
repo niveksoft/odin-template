@@ -1,0 +1,3 @@
+[tools]
+odin = "latest"
+"github:DanielGavin/ols" = { version = "latest", rename_exe = { "ols-*" = "ols", "odinfmt-*" = "odinfmt" } }

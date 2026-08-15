@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: jdx/mise-action@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check
+        run: odin check src -vet
+
+      - name: Build
+        run: |
+          mkdir -p bin
+          odin build src -out:bin/odin-template
+
+      - name: Format
+        run: |
+          odinfmt src -w
+          git diff --exit-code

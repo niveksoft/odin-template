@@ -1,0 +1,9 @@
+{
+    "ols.server.path": "${env:HOME}/.local/share/mise/shims/ols",
+    "[odin]": {
+        "editor.defaultFormatter": "DanielGavin.ols",
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4
+    }
+}
